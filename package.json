@@ -1,0 +1,19 @@
+{
+  "name": "tale-of-the-tape",
+  "version": "1.0.0",
+  "description": "UFC higher or lower: guess which fighter has the higher stat",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs",
+    "build:ufc": "node scripts/build-ufc.mjs",
+    "deploy": "wrangler pages deploy public --project-name tale-of-the-tape --branch main --commit-dirty=true"
+  },
+  "devDependencies": {
+    "wrangler": "^4.157.0"
+  }
+}

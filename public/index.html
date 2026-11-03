@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tale of the Tape · UFC Higher or Lower</title>
+  <meta name="description" content="Think you know UFC fighters? Guess who has the higher stat across 700+ fighters and 39 stats. One wrong call and you're out.">
+  <meta name="theme-color" content="#070708">
+
+  <!-- social cards (og:image / og:url are made absolute by scripts/set-site-url.mjs once the site has a URL) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tale of the Tape · UFC Higher or Lower">
+  <meta property="og:description" content="Guess who has the higher stat. 700+ fighters, 39 stats, one wrong call and you're out.">
+  <meta property="og:image" content="https://tale-of-the-tape.pages.dev/og.png">
+  <meta property="og:url" content="https://tale-of-the-tape.pages.dev/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tale of the Tape · UFC Higher or Lower">
+  <meta name="twitter:description" content="Guess who has the higher stat. 700+ fighters, 39 stats, one wrong call and you're out.">
+  <meta name="twitter:image" content="https://tale-of-the-tape.pages.dev/og.png">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥊</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;600;700&display=swap">
+  <link rel="stylesheet" href="ufc-game.css">
+  <style>
+    :root { color-scheme: dark; --muted: #8b8b94; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; background: #0b0b0d; }
+    body {
+      color: #f4f4f5; overflow: hidden;
+      font: 15px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
+</head>
+<body>
+  <main class="ufc" id="ufc" aria-label="Tale of the Tape: UFC higher or lower">
+    <div class="ufc-card">
+      <header class="ufc-bar">
+        <a class="ufc-brand" href="./" aria-label="Tale of the Tape">
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 1.5h8L22.5 8v8L16 22.5H8L1.5 16V8z" fill="none" stroke="#e11d2e" stroke-width="2.4"/></svg>
+          <span>Tale of the Tape</span>
+        </a>
+        <div class="ufc-cat" id="ufcCat"><span>🥊</span><span>UFC higher or lower</span></div>
+        <div class="ufc-scores">
+          <div class="ufc-score"><span>Score</span><b id="ufcScore">0</b></div>
+          <div class="ufc-score"><span>Best</span><b id="ufcBest">0</b></div>
+        </div>
+      </header>
+      <div class="ufc-stage" id="ufcStage">
+        <div class="ufc-track" id="ufcTrack"></div>
+        <div class="ufc-vs" id="ufcVs">VS</div>
+        <div class="ufc-overlay" id="ufcOverlay"></div>
+        <p class="ufc-credits" id="ufcCredits"></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="ufc-game.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "tale-of-the-tape",
+  "compatibility_date": "2026-11-03",
+  "pages_build_output_dir": "public"
+}
